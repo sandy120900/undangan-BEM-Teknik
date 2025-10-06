@@ -13,7 +13,7 @@
         
         body {
             font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #0612be 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -43,7 +43,7 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1c41e6 0%, #1231be 100%);
             color: white;
             padding: 40px 30px;
             text-align: center;
@@ -116,12 +116,31 @@
         }
         
         .logo-upload-btn:hover {
-            background: #764ba2;
+            background: #2713dd;
             transform: scale(1.1);
         }
         
         .logo-input {
             display: none;
+        }
+        
+        .faculty-logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            display: block;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes logoFloat {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
         }
         
         .header h1 {
@@ -299,21 +318,63 @@
             background: #c82333;
             transform: translateY(-2px);
         }
+        
+        .submit-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .submit-section h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .submit-section p {
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .form-btn {
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 30px;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .form-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: #f8f9fa;
+        }
+        
+        .form-btn:active {
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo" id="logoContainer">
-                <span class="logo-text" id="logoText">BEM</span>
-                <img id="logoImage" class="logo-image" alt="Logo BEM">
-                <label for="logoInput" class="logo-upload-btn" title="Upload Logo">
-                    
-                </label>
-                <input type="file" id="logoInput" class="logo-input" accept="image/*WhatsApp Image 2025-09-28 at 20.31.05.jpeg">
+            <img src="WhatsApp Image 2025-09-28 at 20.31.05.jpeg" 
+                 alt="Logo Fakultas Teknik" 
+                 class="faculty-logo"
+                 id="facultyLogo">
+            <div class="Logo Fakultas Teknik" id="logoContainer">
             </div>
             <h1>UNDANGAN RESMI</h1>
-            <p>Foto Bersama Keluarga Besar BEM</p>
+            <p>Foto Bersama Keluarga Besar BEM Teknik</p>
         </div>
         
         <div class="content">
@@ -325,11 +386,11 @@
             
             <p style="margin-bottom: 20px; line-height: 1.8; color: #555;">
                 Dengan hormat,<br><br>
-                Dalam rangka Foto Bersama untuk membuat Struktur Organisasi
-                sekaligus mendokumentasikan momen kebersamaan kita sebagai keluarga besar BEM Fakultas Teknik, kami mengundang Saudara/i untuk hadir dalam kegiatan ini
+                Dalam rangka mendokumentasikan momen kebersamaan kita sebagai keluarga besar BEM Fakultas Teknik
+                Sekaligus Membentuk Struktur Organisasi BEM FT, kami mengundang Saudara/i untuk hadir dalam acara:
             </p>
             
-            <div class="camera-icon">📸</div>
+            <div class="camera-icon">📸</div> 
             
             <div class="upload-section">
                 <h3 style="color: #667eea; margin-bottom: 15px;">📤 Upload Foto/Desain Tambahan</h3>
@@ -356,7 +417,7 @@
                     <div class="info-icon">📅</div>
                     <div class="info-text">
                         <span class="info-label">Hari/Tanggal</span>
-                        06 Oktober 2025
+                        07 Oktober 2025
                     </div>
                 </div>
                 
@@ -364,7 +425,7 @@
                     <div class="info-icon">⏰</div>
                     <div class="info-text">
                         <span class="info-label">Waktu</span>
-                        14.00-selesai WITA
+                        14.00 S.d/selesai WITA
                     </div>
                 </div>
                 
@@ -380,7 +441,8 @@
                     <div class="info-icon">👔</div>
                     <div class="info-text">
                         <span class="info-label">Dress Code</span>
-                        Isi dress code: Kemeja Putih & Celana Hitam & Almamater
+                        Isi dress code Dosen       : Baju Fakultas Teknik
+                        Isi dress code Anggota Bem : Kemeja Putih & Celana Hitam & Almamater
                     </div>
                 </div>
             </div>
@@ -389,8 +451,16 @@
                 <strong>⚠️ Catatan Penting:</strong><br>
                 • Harap hadir tepat waktu<br>
                 • Dress code wajib dipatuhi<br>
-                • Konfirmasi kehadiran maksimal H-2<br>
+                • Konfirmasi kehadiran maksimal h-1<br>
                 • Membawa atribut BEM Almamater
+            </div>
+            
+            <div class="submit-section">
+                <h3>📋 Konfirmasi Kehadiran Anggota Bem</h3>
+                <p>Silakan isi form konfirmasi kehadiran dan upload foto formal Anda untuk keperluan dokumentasi</p>
+                <a href="https://forms.gle/s8QHpx697fvL7fmo8" target="_blank" class="form-btn">
+                    ✅ Isi Form Konfirmasi
+                </a>
             </div>
             
             <p style="margin-top: 25px; line-height: 1.8; color: #555;">
@@ -411,6 +481,15 @@
     </div>
     
     <script>
+        // Load faculty logo from uploaded image
+        window.addEventListener('DOMContentLoaded', function() {
+            const facultyLogo = document.getElementById('facultyLogo');
+            const uploadedImage = window.fs ? null : null; // Placeholder for uploaded file
+            
+            // If you want to set the faculty logo directly, you can use:
+            // facultyLogo.src = 'URL_TO_YOUR_LOGO_IMAGE';
+        });
+        
         // Upload logo
         const logoInput = document.getElementById('logoInput');
         const logoImage = document.getElementById('logoImage');
@@ -487,5 +566,4 @@
         });
     </script>
 </body>
-
 </html>
